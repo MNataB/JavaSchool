@@ -1,6 +1,4 @@
-package JavaSchool;
-
-import JavaSchool.Utils.B;
+import Utils.B;
 
 /**
  * Created by Наталья on 16.03.2017.

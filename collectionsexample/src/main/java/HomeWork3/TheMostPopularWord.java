@@ -5,13 +5,13 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
-import static HomeWork3.ReadFile.loadWords;
+import static HomeWork3.ReadFile.loadLines;
 
 /**
  * Created by Наталья on 29.03.2017.
  */
 class ReadFile {
-    static List<String> loadWords (FileReader in) throws IOException {
+    static List<String> loadLines(FileReader in) throws IOException {
         BufferedReader reader = new BufferedReader(in);
         List<String> lines = new ArrayList<>();
         String line;
@@ -28,7 +28,7 @@ class ReadFile {
 public class TheMostPopularWord {
     public static void main (String[] args) throws IOException {
         FileReader in = new FileReader("input.txt");
-        List<String> lines = loadWords(in);
+        List<String> lines = loadLines(in);
         ArrayList<String> words = new ArrayList<>();
         for (String list : lines) {
             String[] strings = list.split(" ");

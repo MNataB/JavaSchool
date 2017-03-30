@@ -22,14 +22,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="collectionsexample" />
         <module name="JavaSchool" />
-        <module name="Lesson 2" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8">
-      <module name="collectionsexample" target="1.7" />
-      <module name="Lesson 2" target="1.6" />
+    <bytecodeTargetLevel>
+      <module name="JavaSchool" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -15,9 +15,9 @@ public class SetOfNumbers {
         FileReader in = new FileReader("input.txt");
         List<String> lines = ReadFile.loadLines(in);
         List<Integer> numbers = new ArrayList<>();
-        Integer countOper = Integer.valueOf(lines.get(0));
         String firstValue;
         String secondValue;
+        Integer countOper = Integer.valueOf(lines.get(0));
 
         for (int i = 1; i <= countOper; i++) {
             firstValue = lines.get(i).length() == 1 ? lines.get(i) : lines.get(i).substring(0, lines.get(i).indexOf(" "));

@@ -7,9 +7,6 @@ import java.util.*;
 
 import static HomeWork3.ReadFile.loadLines;
 
-/**
- * Created by Наталья on 29.03.2017.
- */
 class ReadFile {
     static List<String> loadLines(FileReader in) throws IOException {
         BufferedReader reader = new BufferedReader(in);

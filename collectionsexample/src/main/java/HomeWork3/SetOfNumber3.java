@@ -14,14 +14,12 @@ public class SetOfNumber3 {
         Integer countOper = Integer.valueOf(reader.readLine());
         String strValue;
         String string;
-        Integer numvalue;
         Integer minValue = 0;
         for (int cnt = 1; cnt <= countOper; cnt++) {
             string = reader.readLine();
             if (string.length() > 1) {
                 strValue = string.substring(string.indexOf(" ") + 1);
-                numvalue = Integer.valueOf(strValue);
-                numbers.add(numvalue);
+                numbers.add(Integer.valueOf(strValue));
             }
             else {
                 minValue = Collections.min(numbers);

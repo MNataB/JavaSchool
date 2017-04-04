@@ -4,27 +4,31 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class SetOfNumber3 {
+public class SetOfNumbers4 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader("input.txt"));
-        List<Integer> numbers = new ArrayList<>();
-        //Integer countOper = Integer.valueOf(reader.readLine());
+        Integer countOper = Integer.valueOf(reader.readLine());
         String strValue;
-        String string = reader.readLine();
+        String string;
+        int[] numbers = new int[countOper];
         Integer minValue = 0;
-        while ((string = reader.readLine()) != null) {
+        int i = 0;
+        for (int cnt = 0; cnt < countOper; cnt++) {
+            string = reader.readLine();
             if (string.length() > 1) {
                 strValue = string.substring(string.indexOf(" ") + 1);
-                numbers.add(Integer.valueOf(strValue));
+                numbers[i] = Integer.valueOf(strValue);
+                i++;
             }
             else {
-                minValue = Collections.min(numbers);
-                System.out.println(minValue);
-                numbers.remove(minValue);
+                Arrays.sort(numbers);
+                System.out.println(Arrays.toString(numbers));
             }
         }
     }
 }
+

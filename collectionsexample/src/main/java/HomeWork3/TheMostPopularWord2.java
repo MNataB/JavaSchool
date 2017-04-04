@@ -3,7 +3,6 @@ package HomeWork3;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.*;
 
 public class TheMostPopularWord2 {
@@ -23,7 +22,6 @@ public class TheMostPopularWord2 {
 
         Map<String, Integer> counterWords = new HashMap<>();
         Integer maxCount = 1;
-        Integer minCount = 1;
         for (String word : words) {
             if (!word.isEmpty()) {
                 Integer count = counterWords.get(word);
@@ -37,10 +35,9 @@ public class TheMostPopularWord2 {
             }
         }
 
-        if (maxCount == minCount) minCount = 0;
         Map<String, Integer> maxWords = new TreeMap<>();
         for (String word : counterWords.keySet()) {
-            if (counterWords.get(word) != minCount) {
+            if (counterWords.get(word) == maxCount) {
                 maxWords.put(word, counterWords.get(word));
             }
         }

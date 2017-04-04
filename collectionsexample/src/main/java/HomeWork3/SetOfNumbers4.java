@@ -17,14 +17,17 @@ public class SetOfNumbers4 {
         int[] numbers = new int[countOper];
         Integer minValue = 0;
         int i = 0;
+        int j = 0;
         for (int cnt = 0; cnt < countOper; cnt++) {
             string = reader.readLine();
             if (string.length() > 1) {
                 strValue = string.substring(string.indexOf(" ") + 1);
                 numbers[i] = Integer.valueOf(strValue);
                 i++;
+                j++;
             }
             else {
+                int[] tmpArr = int[j];
                 Arrays.sort(numbers);
                 System.out.println(Arrays.toString(numbers));
             }

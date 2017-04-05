@@ -25,8 +25,16 @@ public class SetOfNumbers4 {
                 i++;
             }
             else {
-                Arrays.sort(numbers);
-                System.out.println(Arrays.toString(numbers));
+                int[] tmpArr = new int[i-1];
+                int j = 0;
+                for (int k = 0; k < i-1; k++) {
+                    if (numbers[k] != 0) {
+                        tmpArr[j] = numbers[k];
+                        j++;
+                    }
+                }
+                Arrays.sort(tmpArr);
+                System.out.println(Arrays.toString(tmpArr));
             }
         }
     }

@@ -12,13 +12,11 @@ public class SetOfNumber3 {
         BufferedReader reader = new BufferedReader(new FileReader("input.txt"));
         List<Integer> numbers = new ArrayList<>();
         //Integer countOper = Integer.valueOf(reader.readLine());
-        String strValue;
         String string = reader.readLine();
         Integer minValue = 0;
         while ((string = reader.readLine()) != null) {
             if (string.length() > 1) {
-                strValue = string.substring(string.indexOf(" ") + 1);
-                numbers.add(Integer.valueOf(strValue));
+                numbers.add(Integer.valueOf(string.substring(string.indexOf(" ") + 1)));
             }
             else {
                 minValue = Collections.min(numbers);

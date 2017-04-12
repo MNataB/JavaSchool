@@ -4,7 +4,7 @@ import vault.concept.Predicate;
 import vault.developers.Developer;
 
 /**
- * Created by SBT-Biryukov-VV on 06.04.2017.
+ * Created by Наталья on 12.04.2017.
  */
 public class HighIQPredicate implements Predicate<Developer> {
     @Override

@@ -3,7 +3,7 @@ package vault.developers.java;
 import vault.developers.Developer;
 
 /**
- * Created by SBT-Biryukov-VV on 06.04.2017.
+ * Created by Наталья on 12.04.2017.
  */
 public class JavaDeveloper extends Developer {
 
@@ -35,3 +35,4 @@ public class JavaDeveloper extends Developer {
                 '}';
     }
 }
+

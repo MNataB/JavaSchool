@@ -11,13 +11,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by SBT-Biryukov-VV on 06.04.2017.
+ * Created by Наталья on 12.04.2017.
  */
 public class Main {
 
     public static void main(String[] args) {
 
-    //////////////// Consumer Super ////////////////
+        //////////////// Consumer Super ////////////////
 
         // Объявляем хранилище javaDeveloper'ов
         UniVault<String, JavaDeveloper> javaDeveloperVault = new HashMapVault<>();
@@ -36,7 +36,7 @@ public class Main {
         System.out.println(allByPredicate);
         System.out.println("------------------- ------------------------");
 
-    //////////////// Producer Extends ////////////////
+        //////////////// Producer Extends ////////////////
 
         // Объявляем хранилище обычных Developer'ов
         UniVault<String, Developer> developerVault = new HashMapVault<>();
@@ -58,3 +58,4 @@ public class Main {
 
     }
 }
+

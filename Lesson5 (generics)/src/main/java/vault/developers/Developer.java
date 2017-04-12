@@ -1,8 +1,9 @@
 package vault.developers;
 
 /**
- * Created by SBT-Biryukov-VV on 06.04.2017.
+ * Created by Наталья on 12.04.2017.
  */
+
 public class Developer {
 
     private String name;

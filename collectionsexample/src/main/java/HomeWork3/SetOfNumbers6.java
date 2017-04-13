@@ -1,40 +1,30 @@
 package HomeWork3;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
-/**
- * Created by sbt-manuilova-nb on 05.04.2017.
- * решение проверено на сайте, прошло все тесты
- */
 public class SetOfNumbers6 {
-    public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader("input.txt"));
-        Map<Integer, Integer> values = new TreeMap<>();
-        String string = reader.readLine();
-        int count = Integer.valueOf(string);
-        while ((string = reader.readLine()) != null) {
-            switch (Integer.valueOf(string.substring(0,1))) {
-                case 1 :
-                    Integer val = Integer.valueOf(string.substring(string.indexOf(" ") + 1));
-                    if (values.containsKey(val))
-                        values.put(val, values.get(val) + 1);
-                    else
-                        values.put(val, 1);
-                    break;
-                case 2 :
-                    for (Map.Entry<Integer, Integer> entry : values.entrySet()) {
-                        System.out.println(entry.getKey());
-                        if (entry.getValue() > 1)
-                            values.put(entry.getKey(), entry.getValue() - 1);
-                        else
-                            values.remove(entry.getKey());
-                        break;
-                    }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        TreeMap<Integer, Integer> values = new TreeMap<>();
+        int count = Integer.valueOf(scanner.nextLine());
+        String string;
+        while (count-- >= 0) {
+            string = scanner.nextLine();
+            Integer val1 = Integer.valueOf(string.substring(0, string.indexOf(" ")));
+            if (string.length() > 1) {
+                Integer val2 = Integer.valueOf(string.substring(string.indexOf(" ") + 1));
+                if (values.containsKey(val2))
+                    values.put(val2, values.get(val2) + 1);
+                else
+                    values.put(val2, 1);
+            } else {
+                System.out.println(values.firstKey());
+                if (values.firstEntry().getValue() > 1)
+                    values.put(values.firstKey(), values.firstEntry().getValue() - 1);
+                else
+                    values.remove(values.firstEntry().getKey());
             }
         }
+        scanner.close();
     }
 }

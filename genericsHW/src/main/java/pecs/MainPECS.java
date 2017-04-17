@@ -44,8 +44,13 @@ public class MainPECS {
         animals1.add(cat2);
         System.out.println("---------- animals1 ---------");
         System.out.println(animals1);
-        CollectionUtils.removeAll(animals1,cats1);
-        System.out.println("---------- animals1 ---------");
-        System.out.println(animals1);
+//        CollectionUtils.removeAll(animals1,cats1);
+//        System.out.println("---------- animals1 ---------");
+//        System.out.println(animals1);
+
+        if (CollectionUtils.containsAny(animals1,cats1) == true)
+            System.out.println("contains");
+        else
+            System.out.println("not contains");
     }
 }
